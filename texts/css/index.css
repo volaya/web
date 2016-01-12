@@ -1,0 +1,97 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+body { font:1.05em "Open Sans", sans-serif; background-color:#FFFFFF;  
+font-size-adjust:none;
+font-style:normal;
+font-variant:normal;
+font-weight:normal;
+background: #FFFFFF;
+}
+
+p { padding:0 0  1em 0; line-height: 150%;}
+
+ul,ol{padding-left: 40px; line-height: 150%;}
+.main li{margin: 0 0 9px 0}
+
+h1,h2{ font-weight:normal; color: #333; font-family:Georgia, serif; }
+h3,h4,h5,h6 { font-weight: normal; color: #333; font-family:Georgia, serif; }
+
+hr {border-top: dotted 2px; margin-bottom:1.625em;}
+
+h1 { font-size: 3.125em; margin-bottom: 0.765em; line-height: 1; }
+h2 { font-size: 1.9em;  margin-bottom: 0.855em; margin-top: 1em;}
+h3 { font-size: 1.6em;  margin-bottom: 0.956em; margin-top: 1em;}
+h4 { font-size: 1.4em;  margin-bottom: 1.161em; margin-top: 1em;}
+h5,h6 { font-size: 1.313em;  margin-bottom: 1.238em; margin-top: 1em;}
+
+
+h1.title {
+	font: 200 6em 'Tangerine', Helvetica, Sans-serif;
+	color: #333;
+}
+h3.title {
+	font: 200 3.5em 'Tangerine', Helvetica, Sans-serif;
+	color: #333;
+}
+dl { margin: 0 0 1.625em 0; }
+dl dt { font-weight: bold; }
+dl dd { margin-left: 1.625em; }
+
+a { color:#005AF2; text-decoration:none; }
+a:hover { text-decoration: underline; }
+
+
+
+.main {margin:0 auto;  width:750px;}
+
+
+ol {
+    list-style-type: none;
+    list-style-type: decimal !ie; /*IE 7- hack*/
+    
+    margin: 0;
+    margin-left: 3em;
+    padding: 0;
+    
+    counter-reset: li-counter;
+}
+ol > li{
+    position: relative;
+    margin-bottom: 20px;
+    padding-left: 0.5em;
+    min-height: 3em;
+    border-left: 2px solid #CCCCCC;
+}
+ol > li:before {
+    position: absolute;
+    top: 0;
+    left: -2em;
+    width: 0.8em;
+    
+    font-size: 2em;
+    line-height: 1;
+    font-weight: bold;
+    text-align: right;
+    color: #464646;
+
+    content: counter(li-counter);
+    counter-increment: li-counter;
+}
+
+li:hover { background-color:#DCE9F2; }
+
+a:link {
+    color: #000000;
+    text-decoration:none;
+}
+
+/* visited link */
+a:visited {
+    color: #000000;
+    text-decoration:none;
+}
+
+/* mouse over link */
+a:hover {
+    color: #000000;
+    text-decoration:none;
+
