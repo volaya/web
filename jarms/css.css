@@ -1,0 +1,14 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+body { font:1.05em "Open Sans", sans-serif; background-color:#FFFFFF;  
+font-size-adjust:none;
+font-style:normal;
+font-variant:normal;
+font-weight:normal;
+background: #FFFFFF;
+}
+.main {
+    margin:20px auto;  
+    margin-top: 120px;
+    width:690px;
+}
+p.first:first-letter{ float:left;font-family: "Open Sans",serif;font-size:3em;font-weight:700;line-height:.7em;margin-bottom:-0em;padding:0.2em 0.1em 0 0; }
