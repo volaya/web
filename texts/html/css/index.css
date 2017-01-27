@@ -1,17 +1,52 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans);
-body { font:1.05em "Open Sans", sans-serif; background-color:#FFFFFF;  
-font-size-adjust:none;
-font-style:normal;
-font-variant:normal;
-font-weight:normal;
-background: #FFFFFF;
+@font-face {
+    font-family: 'et-book';
+    src: url('etbookot-roman-webfont.woff2') format('woff2'),
+         url('etbookot-roman-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'et-book';
+    src: url('etbookot-italic-webfont.woff2') format('woff2'),
+         url('etbookot-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'et-book';
+    src: url('etbookot-bold-webfont.woff2') format('woff2'),
+         url('etbookot-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+html {
+    font-size: calc( 16px + (32 - 16) * ( (100vw - 320px) / ( 1200 - 320) ));
+}
+body {     
+    background-color: white;
+    color: black;
+    font-family: 'et-book', Georgia, serif;
+    font-weight: normal;
+    font-variant-ligatures: common-ligatures;
+    font-variant-numeric: oldstyle-nums;
+    line-height: 1.5;font-size-adjust:none;
+    font-style:normal;
+    font-variant:normal;
+    font-weight:normal;
+    background: #FFFFFF;
 }
 
 p { padding:0 0  1em 0; line-height: 150%;}
 
 ul,ol{padding-left: 40px; line-height: 150%;}
-.main li{margin: 0 0 9px 0}
 
+.main {
+    display: block;
+    max-width: 25em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+}
 h1,h2{ font-weight:normal; color: #333; font-family:Georgia, serif; }
 h3,h4,h5,h6 { font-weight: normal; color: #333; font-family:Georgia, serif; }
 
@@ -41,7 +76,7 @@ a:hover { text-decoration: underline; }
 
 
 
-.main {margin:0 auto;  width:750px;}
+.main {margin:0 auto}
 
 
 ol {
@@ -60,6 +95,7 @@ ol > li{
     padding-left: 0.5em;
     min-height: 3em;
     border-left: 2px solid #CCCCCC;
+    font-size: 16pt
 }
 ol > li:before {
     position: absolute;
