@@ -35,7 +35,7 @@ body {
     font-weight:normal;
     background: #FFFFFF;
 }
-p.first:first-letter{ float:left;font-family: "Open Sans",serif;font-size:3em;font-weight:700;line-height:.7em;margin-bottom:-0em;padding:0.2em 0.1em 0 0; }
+p.first:first-letter{ float:left;font-family: 'et-book', Georgia, serif;;font-size:3em;font-weight:700;line-height:.7em;margin-bottom:-0em;padding:0.2em 0.1em 0 0; }
 p { padding:0 0  1em 0; line-height: 150%;}
 
 ul,ol{padding-left: 40px; line-height: 150%;}
