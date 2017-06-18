@@ -53,7 +53,7 @@ dl { margin: 0 0 1.625em 0; }
 dl dt { font-weight: bold; }
 dl dd { margin-left: 1.625em; }
 
-a { color:#005AF2; text-decoration:none; }
+a { color:#555555; text-decoration:none; }
 a:hover { text-decoration: underline; }
 
 table { margin-bottom:1.625em; border-collapse: collapse; border: 1px solid black; margin-left:auto; margin-right:auto}
@@ -106,7 +106,7 @@ img{
     width: 85px;
     padding: 12px 0;
     text-align: center;
-    background: #99ccff;
+    background: #000000;
     -webkit-transition-duration: 0.3s;
     -moz-transition-duration: 0.3s;
     transition-duration: 0.3s;
@@ -159,7 +159,7 @@ img{
     width: 85px;
     padding: 12px 0;
     text-align: center;
-    background: #FFaa56;
+    background: #000000;
     -webkit-transition-duration: 0.3s;
     -moz-transition-duration: 0.3s;
     transition-duration: 0.3s;
@@ -176,7 +176,7 @@ img{
     position: fixed;
     top: 60px;
     left: -450px;
-    background: #FFaa56;
+    background: #000000;
     width: 400px;
     padding: 25px;
     height: -moz-calc(100% - 85px);
