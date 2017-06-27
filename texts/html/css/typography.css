@@ -159,7 +159,7 @@ img{
     width: 85px;
     padding: 12px 0;
     text-align: center;
-    background: #000000;
+    background: #292929;
     -webkit-transition-duration: 0.3s;
     -moz-transition-duration: 0.3s;
     transition-duration: 0.3s;
@@ -193,9 +193,9 @@ img{
     -moz-border-radius: 0 0 5px 0;
     border-radius: 0 0 5px 0;
     font: 'EB Garamond', serif;
-    background-color:#FFFFFF; 
+    background-color: #292929;
     z-index: 100;
-    color: black;
+    color: white;
     font-weight: normal;
     font-size:16pt;
 }
@@ -209,3 +209,55 @@ img{
     z-index: 100;
 }
 
+#slideout_inner_general ul {
+ width: 100%;
+ background: #292929;
+ color: white;
+ font-size:16pt;
+ font: 'EB Garamond', serif;
+ list-style: none;
+ padding-left: 0;
+}
+ 
+#slideout_inner_general li {
+ padding: 10px;
+ border-bottom: 1px solid black;
+ border-top: 1px solid #3c3c3c;
+}
+
+#slideout_inner_general li a{
+ color: white;
+ display: inline-block
+}
+
+#slideout_inner_general li:first-child {
+    border-top: none;
+}
+ 
+#slideout_inner_general li:last-child {
+   border-bottom: none;
+}
+
+#slideout_inner_general::-webkit-scrollbar-track
+{
+    border: 1px solid black;
+    background-color: white;
+}
+
+#slideout_inner_general::-webkit-scrollbar
+{
+    width: 10px;
+    background-color: #292929;
+}
+
+#slideout_inner_general::-webkit-scrollbar-thumb
+{
+    background-color: #292929;  
+}
+
+#slideout_inner_general a:hover{
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    text-decoration: none;
+}
