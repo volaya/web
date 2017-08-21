@@ -13,7 +13,7 @@ def buildAndCopy():
     path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))),  "textos", "convert")
     buildFile = os.path.join(path, "convert.py")
     print buildFile
-    call("python.exe " +  buildFile)
+    call(["python", buildFile])
     
     dstParent = os.path.dirname(os.path.abspath(__file__))
     src = os.path.join(path, "epub")
@@ -27,9 +27,9 @@ def buildAndCopy():
         shutil.rmtree(dst, ignore_errors=True)
     shutil.copytree(src, dst)    
 
-    call("git add .")
-    call("git commit -m update")
-    call("git push")    
+    call("git add .".split(" "))
+    call("git commit -m update".split(" "))
+    call("git push".split(" "))    
 
 if __name__ == '__main__':  
     buildAndCopy()
