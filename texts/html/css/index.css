@@ -118,4 +118,8 @@ a:visited {
 a:hover {
     color: #000000;
     text-decoration:none;
+}
 
+div.itshape {
+    font-style: italic;
+}

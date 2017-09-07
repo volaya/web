@@ -261,3 +261,7 @@ img{
     transform: scale(1.2);
     text-decoration: none;
 }
+
+div.itshape {
+    font-style: italic;
+}
