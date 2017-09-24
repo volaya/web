@@ -12,7 +12,6 @@ from subprocess import call
 def buildAndCopy():
     path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))),  "textos", "convert")
     buildFile = os.path.join(path, "convert.py")
-    print buildFile
     call(["python", buildFile])
     
     dstParent = os.path.dirname(os.path.abspath(__file__))
