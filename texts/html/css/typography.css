@@ -81,6 +81,16 @@ img{
     margin-right: auto;
     padding: 1em;
 }
+
+.indexmain {
+    display: block;
+    max-width: 25em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+    font-variant: small-caps;
+}
+
 #toindex {
     position: fixed;
     top: 10px;
