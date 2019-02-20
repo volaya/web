@@ -28,7 +28,7 @@ def buildAndCopy():
 
     call("git add .".split(" "))
     call("git commit -m update".split(" "))
-    call("git push".split(" "))    
+    call("git push origin master".split(" "))    
 
 if __name__ == '__main__':  
     buildAndCopy()
