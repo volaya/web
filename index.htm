@@ -7,52 +7,57 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
 
     <style type="text/css">
-      body {
-        padding-top: 60px;
-        padding-bottom: 40px;
-        font-family: 'Open Sans', sans-serif;
-        font-size: 14pt;
+    .container {
+      color: white;
+        background: white;
+        padding: 15px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translateX(-50%) translateY(-50%);
+        -webkit-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
       }
+
+    .header {
+        z-index: 100;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        font-family: 'EB Garamond', serif;
+        font-size:14pt;
+        background-color: #ffffff;
+    }
+
+    a {
+      width: 100%;
+    }
+
+    h1 {
+      margin: 0;
+    }      
     </style>
-    <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+
   </head>
 
   <body>
-
+    <div class="header" id="myHeader">
+    <h1>Víctor Olaya</h1>
+    </div>
+    
     <div class="container">
-      <div class="row">
-
-            <div class="col-lg-12">
-                <h1 class="page-header">About me
-                </h1>
-            </div>
-
-        </div>
-      <div class="row">
-        <div class="col-md-8">
-           <p>Here are a few facts about myself to get you started:</p>
-			<ul>
-			<li>I was born in Spain, but currently live in France, in the charming and quiet village of <a href="http://osm.org/go/xVQgRfxHl-?relation=133235">Saint Arailles</a></p>
-			<li>I am a free culture advocate, so everything that you can find here is free to download and use, and it is distributed under a <a href="http://creativecommons.org/licenses/by/3.0/">CC Attribution</a> license.</li>
-			<li>I am a GIS developer. I am the creator and main developer of the <a href="http://docs.qgis.org/testing/en/docs/user_manual/processing/index.html">QGIS Processing Framework</a> (formerly know as SEXTANTE). I also participate in other <a href="http://github.com/volaya">open source projects</a>.</li>
-			<li>You can contact me at the following email adress: <a href="mailto:#">volayaf@gmail.com</a>. For software-related questions, please use the corresponding mailing lists instead</li>
-			<li>I play guitar and violin. Have a look at the <a href="music.htm">music</a> section to listen to some of my compositions.</li>
-			<li>I write both literary and technical texts. In the <a href="writing.htm">writing</a> section you can find some of my books (in Spanish).</li>
-        </div>
-        <div class="col-md-4">
-		    <img src="img/foto_girona.jpg" width="300px"/>
-		</div>
-      </div>
-
-
-    </div> 
-    <script src="bootstrap/js/jquery.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-
+        
+		    <a href="writing.htm"><img src="img/writing.png" width="300px"/></a>
+        <a href="music.htm"><img src="img/music.png" width="300px"/>
+        <a href="http://www.github.com/volaya"><img src="img/software.png" width="300px"/></a>
+    </div>
 
   </body>
 </html>

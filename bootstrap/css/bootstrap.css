@@ -5,8 +5,7 @@
  */
 
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
-html {
-  font-family: sans-serif;
+html {  
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
@@ -54,26 +53,21 @@ abbr[title] {
 }
 b,
 strong {
-  font-weight: bold;
 }
 dfn {
-  font-style: italic;
 }
 h1 {
   margin: .67em 0;
-  font-size: 2em;
 }
 mark {
   color: #000;
   background: #ff0;
 }
 small {
-  font-size: 80%;
 }
 sub,
 sup {
   position: relative;
-  font-size: 75%;
   line-height: 0;
   vertical-align: baseline;
 }
@@ -103,9 +97,7 @@ pre {
 code,
 kbd,
 pre,
-samp {
-  font-family: monospace, monospace;
-  font-size: 1em;
+samp {  
 }
 button,
 input,
@@ -113,7 +105,6 @@ optgroup,
 select,
 textarea {
   margin: 0;
-  font: inherit;
   color: inherit;
 }
 button {
@@ -174,7 +165,6 @@ textarea {
   overflow: auto;
 }
 optgroup {
-  font-weight: bold;
 }
 table {
   border-spacing: 0;
@@ -268,13 +258,10 @@ th {
           box-sizing: border-box;
 }
 html {
-  font-size: 62.5%;
 
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
+body {  
   line-height: 1.428571429;
   color: #333;
   background-color: #fff;
@@ -282,9 +269,7 @@ body {
 input,
 button,
 select,
-textarea {
-  font-family: inherit;
-  font-size: inherit;
+textarea {  
   line-height: inherit;
 }
 a {
@@ -357,9 +342,7 @@ h6,
 .h3,
 .h4,
 .h5,
-.h6 {
-  font-family: inherit;
-  font-weight: 500;
+.h6 {  
   line-height: 1.1;
   color: inherit;
 }
@@ -387,7 +370,6 @@ h6 .small,
 .h4 .small,
 .h5 .small,
 .h6 .small {
-  font-weight: normal;
   line-height: 1;
   color: #999;
 }
@@ -412,7 +394,6 @@ h2 .small,
 .h2 .small,
 h3 .small,
 .h3 .small {
-  font-size: 65%;
 }
 h4,
 .h4,
@@ -435,52 +416,40 @@ h5 .small,
 .h5 .small,
 h6 .small,
 .h6 .small {
-  font-size: 75%;
 }
 h1,
 .h1 {
-  font-size: 36px;
 }
 h2,
 .h2 {
-  font-size: 30px;
 }
 h3,
 .h3 {
-  font-size: 24px;
 }
 h4,
 .h4 {
-  font-size: 18px;
 }
 h5,
 .h5 {
-  font-size: 14px;
 }
 h6,
 .h6 {
-  font-size: 12px;
 }
 p {
   margin: 0 0 10px;
 }
 .lead {
   margin-bottom: 20px;
-  font-size: 16px;
-  font-weight: 200;
   line-height: 1.4;
 }
 @media (min-width: 768px) {
   .lead {
-    font-size: 21px;
   }
 }
 small,
 .small {
-  font-size: 85%;
 }
 cite {
-  font-style: normal;
 }
 .text-left {
   text-align: left;
@@ -599,7 +568,6 @@ dd {
   line-height: 1.428571429;
 }
 dt {
-  font-weight: bold;
 }
 dd {
   margin-left: 0;
@@ -624,13 +592,11 @@ abbr[data-original-title] {
   border-bottom: 1px dotted #999;
 }
 .initialism {
-  font-size: 90%;
   text-transform: uppercase;
 }
 blockquote {
   padding: 10px 20px;
   margin: 0 0 20px;
-  font-size: 17.5px;
   border-left: 5px solid #eee;
 }
 blockquote p:last-child,
@@ -642,7 +608,6 @@ blockquote footer,
 blockquote small,
 blockquote .small {
   display: block;
-  font-size: 80%;
   line-height: 1.428571429;
   color: #999;
 }
@@ -681,18 +646,15 @@ blockquote:after {
 }
 address {
   margin-bottom: 20px;
-  font-style: normal;
   line-height: 1.428571429;
 }
 code,
 kbd,
 pre,
-samp {
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+samp {  
 }
 code {
   padding: 2px 4px;
-  font-size: 90%;
   color: #c7254e;
   white-space: nowrap;
   background-color: #f9f2f4;
@@ -700,7 +662,6 @@ code {
 }
 kbd {
   padding: 2px 4px;
-  font-size: 90%;
   color: #fff;
   background-color: #333;
   border-radius: 3px;
@@ -710,7 +671,6 @@ pre {
   display: block;
   padding: 9.5px;
   margin: 0 0 10px;
-  font-size: 13px;
   line-height: 1.428571429;
   color: #333;
   word-break: break-all;
@@ -721,7 +681,6 @@ pre {
 }
 pre code {
   padding: 0;
-  font-size: inherit;
   color: inherit;
   white-space: pre-wrap;
   background-color: transparent;
@@ -1638,7 +1597,6 @@ legend {
   width: 100%;
   padding: 0;
   margin-bottom: 20px;
-  font-size: 21px;
   line-height: inherit;
   color: #333;
   border: 0;
@@ -1647,7 +1605,6 @@ legend {
 label {
   display: inline-block;
   margin-bottom: 5px;
-  font-weight: bold;
 }
 input[type="search"] {
   -webkit-box-sizing: border-box;
@@ -1682,7 +1639,6 @@ input[type="checkbox"]:focus {
 output {
   display: block;
   padding-top: 7px;
-  font-size: 14px;
   line-height: 1.428571429;
   color: #555;
 }
@@ -1691,7 +1647,6 @@ output {
   width: 100%;
   height: 34px;
   padding: 6px 12px;
-  font-size: 14px;
   line-height: 1.428571429;
   color: #555;
   background-color: #fff;
@@ -1749,7 +1704,6 @@ input[type="date"] {
 .radio label,
 .checkbox label {
   display: inline;
-  font-weight: normal;
   cursor: pointer;
 }
 .radio input[type="radio"],
@@ -1768,7 +1722,6 @@ input[type="date"] {
   display: inline-block;
   padding-left: 20px;
   margin-bottom: 0;
-  font-weight: normal;
   vertical-align: middle;
   cursor: pointer;
 }
@@ -1794,7 +1747,6 @@ fieldset[disabled] .checkbox-inline {
 .input-sm {
   height: 30px;
   padding: 5px 10px;
-  font-size: 12px;
   line-height: 1.5;
   border-radius: 3px;
 }
@@ -1809,7 +1761,6 @@ select[multiple].input-sm {
 .input-lg {
   height: 46px;
   padding: 10px 16px;
-  font-size: 18px;
   line-height: 1.33;
   border-radius: 6px;
 }
@@ -1989,8 +1940,6 @@ select[multiple].input-lg {
   display: inline-block;
   padding: 6px 12px;
   margin-bottom: 0;
-  font-size: 14px;
-  font-weight: normal;
   line-height: 1.428571429;
   text-align: center;
   white-space: nowrap;
@@ -2279,7 +2228,6 @@ fieldset[disabled] .btn-danger.active {
   background-color: #fff;
 }
 .btn-link {
-  font-weight: normal;
   color: #428bca;
   cursor: pointer;
   border-radius: 0;
@@ -2313,19 +2261,16 @@ fieldset[disabled] .btn-link:focus {
 }
 .btn-lg {
   padding: 10px 16px;
-  font-size: 18px;
   line-height: 1.33;
   border-radius: 6px;
 }
 .btn-sm {
   padding: 5px 10px;
-  font-size: 12px;
   line-height: 1.5;
   border-radius: 3px;
 }
 .btn-xs {
   padding: 1px 5px;
-  font-size: 12px;
   line-height: 1.5;
   border-radius: 3px;
 }
@@ -2364,23 +2309,14 @@ input[type="button"].btn-block {
   -webkit-transition: height .35s ease;
           transition: height .35s ease;
 }
-@font-face {
-  font-family: 'Glyphicons Halflings';
 
-  src: url('../fonts/glyphicons-halflings-regular.eot');
-  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 .glyphicon {
   position: relative;
   top: 1px;
-  display: inline-block;
-  font-family: 'Glyphicons Halflings';
-  font-style: normal;
-  font-weight: normal;
+  display: inline-block;  
   line-height: 1;
 
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 .glyphicon-asterisk:before {
   content: "\2a";
@@ -2538,7 +2474,6 @@ input[type="button"].btn-block {
 .glyphicon-camera:before {
   content: "\e046";
 }
-.glyphicon-font:before {
   content: "\e047";
 }
 .glyphicon-bold:before {
@@ -3008,7 +2943,6 @@ input[type="button"].btn-block {
   min-width: 160px;
   padding: 5px 0;
   margin: 2px 0 0;
-  font-size: 14px;
   list-style: none;
   background-color: #fff;
   background-clip: padding-box;
@@ -3032,7 +2966,6 @@ input[type="button"].btn-block {
   display: block;
   padding: 3px 20px;
   clear: both;
-  font-weight: normal;
   line-height: 1.428571429;
   color: #333;
   white-space: nowrap;
@@ -3081,7 +3014,6 @@ input[type="button"].btn-block {
 .dropdown-header {
   display: block;
   padding: 3px 20px;
-  font-size: 12px;
   line-height: 1.428571429;
   color: #999;
 }
@@ -3198,19 +3130,16 @@ input[type="button"].btn-block {
 }
 .btn-group-xs > .btn {
   padding: 1px 5px;
-  font-size: 12px;
   line-height: 1.5;
   border-radius: 3px;
 }
 .btn-group-sm > .btn {
   padding: 5px 10px;
-  font-size: 12px;
   line-height: 1.5;
   border-radius: 3px;
 }
 .btn-group-lg > .btn {
   padding: 10px 16px;
-  font-size: 18px;
   line-height: 1.33;
   border-radius: 6px;
 }
@@ -3322,7 +3251,6 @@ input[type="button"].btn-block {
 .input-group-lg > .input-group-btn > .btn {
   height: 46px;
   padding: 10px 16px;
-  font-size: 18px;
   line-height: 1.33;
   border-radius: 6px;
 }
@@ -3345,7 +3273,6 @@ select[multiple].input-group-lg > .input-group-btn > .btn {
 .input-group-sm > .input-group-btn > .btn {
   height: 30px;
   padding: 5px 10px;
-  font-size: 12px;
   line-height: 1.5;
   border-radius: 3px;
 }
@@ -3381,8 +3308,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .input-group-addon {
   padding: 6px 12px;
-  font-size: 14px;
-  font-weight: normal;
   line-height: 1;
   color: #555;
   text-align: center;
@@ -3392,12 +3317,10 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .input-group-addon.input-sm {
   padding: 5px 10px;
-  font-size: 12px;
   border-radius: 3px;
 }
 .input-group-addon.input-lg {
   padding: 10px 16px;
-  font-size: 18px;
   border-radius: 6px;
 }
 .input-group-addon input[type="radio"],
@@ -3432,7 +3355,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .input-group-btn {
   position: relative;
-  font-size: 0;
   white-space: nowrap;
 }
 .input-group-btn > .btn {
@@ -3747,7 +3669,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   float: left;
   height: 20px;
   padding: 15px 15px;
-  font-size: 18px;
   line-height: 20px;
 }
 .navbar-brand:hover,
@@ -4197,7 +4118,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .pagination-lg > li > a,
 .pagination-lg > li > span {
   padding: 10px 16px;
-  font-size: 18px;
 }
 .pagination-lg > li:first-child > a,
 .pagination-lg > li:first-child > span {
@@ -4212,7 +4132,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .pagination-sm > li > a,
 .pagination-sm > li > span {
   padding: 5px 10px;
-  font-size: 12px;
 }
 .pagination-sm > li:first-child > a,
 .pagination-sm > li:first-child > span {
@@ -4265,8 +4184,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .label {
   display: inline;
   padding: .2em .6em .3em;
-  font-size: 75%;
-  font-weight: bold;
   line-height: 1;
   color: #fff;
   text-align: center;
@@ -4333,8 +4250,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   display: inline-block;
   min-width: 10px;
   padding: 3px 7px;
-  font-size: 12px;
-  font-weight: bold;
   line-height: 1;
   color: #fff;
   text-align: center;
@@ -4380,8 +4295,6 @@ a.list-group-item.active > .badge,
 }
 .jumbotron p {
   margin-bottom: 15px;
-  font-size: 21px;
-  font-weight: 200;
 }
 .container .jumbotron {
   border-radius: 6px;
@@ -4400,7 +4313,6 @@ a.list-group-item.active > .badge,
   }
   .jumbotron h1,
   .jumbotron .h1 {
-    font-size: 63px;
   }
 }
 .thumbnail {
@@ -4442,7 +4354,6 @@ a.thumbnail.active {
   color: inherit;
 }
 .alert .alert-link {
-  font-weight: bold;
 }
 .alert > p,
 .alert > ul {
@@ -4533,7 +4444,6 @@ a.thumbnail.active {
   float: left;
   width: 0;
   height: 100%;
-  font-size: 12px;
   line-height: 20px;
   color: #fff;
   text-align: center;
@@ -4923,7 +4833,6 @@ a.list-group-item-danger.active:focus {
 .panel-title {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 16px;
   color: inherit;
 }
 .panel-title > a {
@@ -5067,8 +4976,6 @@ a.list-group-item-danger.active:focus {
 }
 .close {
   float: right;
-  font-size: 21px;
-  font-weight: bold;
   line-height: 1;
   color: #000;
   text-shadow: 0 1px 0 #fff;
@@ -5205,7 +5112,6 @@ button.close {
   position: absolute;
   z-index: 1030;
   display: block;
-  font-size: 12px;
   line-height: 1.4;
   visibility: visible;
   filter: alpha(opacity=0);
@@ -5332,8 +5238,6 @@ button.close {
 .popover-title {
   padding: 8px 14px;
   margin: 0;
-  font-size: 14px;
-  font-weight: normal;
   line-height: 18px;
   background-color: #f7f7f7;
   border-bottom: 1px solid #ebebeb;
@@ -5475,7 +5379,6 @@ button.close {
   bottom: 0;
   left: 0;
   width: 15%;
-  font-size: 20px;
   color: #fff;
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
@@ -5526,8 +5429,7 @@ button.close {
   width: 20px;
   height: 20px;
   margin-top: -10px;
-  margin-left: -10px;
-  font-family: serif;
+  margin-left: -10px;  
 }
 .carousel-control .icon-prev:before {
   content: '\2039';
@@ -5588,7 +5490,6 @@ button.close {
     height: 30px;
     margin-top: -15px;
     margin-left: -15px;
-    font-size: 30px;
   }
   .carousel-caption {
     right: 20%;
@@ -5667,7 +5568,6 @@ button.close {
   visibility: hidden;
 }
 .text-hide {
-  font: 0/0 a;
   color: transparent;
   text-shadow: none;
   background-color: transparent;
