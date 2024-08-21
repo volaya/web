@@ -1,1182 +1,1829 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+    <head>
+        <title>Cuentos</title>
+        <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
+        <style type="text/css">
+            @font-face {
+                font-family: 'EB Garamond';
+                src: url('./fonts/ebgaramond.woff2') format('woff2');
+            }
 
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
+            .topheader {
+                z-index: 100;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                font-family: 'EB Garamond', serif;
+                font-size: 14pt;
+                background-color: #ffffff;
+            }
 
-    <title>Victor Olaya - Cuentos</title>
-    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
+            .container {
+                position: absolute;
+                left: 50%;
+                margin-left: -400px;
+                width: 800px;
+                padding: 50px;
+            }
 
-    <style type="text/css">
-        @font-face {
-            font-family: "EB Garamond";
-            src: url("../fonts/ebgaramond.woff2") format("woff2");
+            ol {
+                color: #555;
+                list-style-type: none;
+            }
+
+            ol li {
+                position: relative;
+                font: 25px EB Garamond, sans-serif;
+            }
+
+            .soundfile {
+                font: 15px EB Garamond, sans-serif;
+                padding-left: 350px;
+                color: #555;
+                /*margin-top: -10px;*/
+                margin: 10px;
+            }
+
+            span {
+                position: absolute;
+                margin-top: 20px;
+            }
+
+            h1 {
+                font-family: 'EB Garamond', serif;
+                margin: 0;
+            }
+
+            h2 {
+                font-family: 'EB Garamond', serif;
+            }
+
+            h3 {
+                font: 25px EB Garamond, sans-serif;
+            }
+
+            .collapsible {
+                margin-top: 20px;
+                cursor: pointer;
+                width: 100%;
+                border: none;
+                text-align: left;
+                outline: none;
+                font: 25px EB Garamond, sans-serif;
+                font-weight: bold;
+                background-color: #ffffff;
+            }
+
+            .active,
+            .collapsible:hover {
+            }
+
+            .collapsible:after {
+                content: '\002B';
+                float: right;
+                margin-left: 5px;
+            }
+
+            .active:after {
+                content: '\2212';
+            }
+
+            .content {
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.2s ease-out;
+            }
+
+            img {
+                filter: grayscale(100%);
+                object-fit: cover;
+                border-radius: 15%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="topheader">
+            <h1>Cuentos</h1>
+        </div>
+        <div class="container">
+            <button class="collapsible">
+                Historia de un globo y otros cuentos
+            </button>
+            <div class="content">
+                <div class="row"></div>
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/gusanos.jpeg"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>Gusanos</h3>
+                        <audio controls>
+                            <source src="audio/gusanos.mp3" type="audio/mp3" />
+                        </audio>
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/globo.jpeg"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>Historia de un globo</h3>
+                        <audio controls>
+                            <source
+                                src="audio/historiadeunglobo.mp3"
+                                type="audio/mp3"
+                            />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/naufrago.jpeg"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>El náufrago y el árbol</h3>
+                        <audio controls>
+                            <source src="audio/naufrago.mp3" type="audio/mp3" />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/haciaatras.jpeg"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>Hacia atrás</h3>
+                        <audio controls>
+                            <source
+                                src="audio/haciatras.mp3"
+                                type="audio/mp3"
+                            />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/cielobajoelmar.jpeg"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>El cielo bajo el mar</h3>
+                        <audio controls>
+                            <source
+                                src="audio/cielobajoelmar.mp3"
+                                type="audio/mp3"
+                            />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/laprimeranaranja.jpeg"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>La primera naranja</h3>
+                        <audio controls>
+                            <source
+                                src="audio/primeranaranja.mp3"
+                                type="audio/mp3"
+                            />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/caracola.jpeg"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>Caracola</h3>
+                        <audio controls>
+                            <source src="audio/caracola.mp3" type="audio/mp3" />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/rayos.jpeg"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>Rayos</h3>
+                        <audio controls>
+                            <source src="audio/rayos.mp3" type="audio/mp3" />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/capicua.jpeg"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>El último billete capicúa</h3>
+                        <audio controls>
+                            <source src="audio/capicua.mp3" type="audio/mp3" />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/pan.jpeg"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>Pan</h3>
+                        <audio controls>
+                            <source src="audio/pan.mp3" type="audio/mp3" />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/papelesalviento.jpeg"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>Papeles al viento</h3>
+                        <audio controls>
+                            <source
+                                src="audio/papelesalviento.mp3"
+                                type="audio/mp3"
+                            />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/mediasirena.jpeg"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>Media sirena</h3>
+                        <audio controls>
+                            <source
+                                src="audio/mediasirena.mp3"
+                                type="audio/mp3"
+                            />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/unomismo.jpeg"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>Uno mismo</h3>
+                        <audio controls>
+                            <source src="audio/camaleon.mp3" type="audio/mp3" />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/cieloylago.jpeg"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>El cielo y el lago</h3>
+                        <audio controls>
+                            <source
+                                src="audio/elcieloyellago.mp3"
+                                type="audio/mp3"
+                            />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/marcapaginas.jpeg"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>Marcapáginas</h3>
+                        <audio controls>
+                            <source
+                                src="audio/marcapaginas.mp3"
+                                type="audio/mp3"
+                            />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/arbolviajero.jpeg"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>Fábula del árbol viajero</h3>
+                        <audio controls>
+                            <source
+                                src="audio/arbolviajero.mp3"
+                                type="audio/mp3"
+                            />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/pendulo.jpeg"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>Péndulo</h3>
+                        <audio controls>
+                            <source src="audio/pendulo.mp3" type="audio/mp3" />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/bajarelcielo.jpeg"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>Bajar el cielo</h3>
+                        <audio controls>
+                            <source
+                                src="audio/bajarcielo.mp3"
+                                type="audio/mp3"
+                            />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/sineco.png"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>Sin eco</h3>
+                        <audio controls>
+                            <source src="audio/sineco.mp3" type="audio/mp3" />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/lostimidos.png"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>Los tímidos</h3>
+                        <audio controls>
+                            <source
+                                src="audio/lostimidos.mp3"
+                                type="audio/mp3"
+                            />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/cigarra.png"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>La cigarra y la hormiga</h3>
+                        <audio controls>
+                            <source src="audio/cigarra.mp3" type="audio/mp3" />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/ninolloraba.png"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>El niño que lloraba galaxias</h3>
+                        <audio controls>
+                            <source
+                                src="audio/ninolloraba.mp3"
+                                type="audio/mp3"
+                            />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/gatounavida.png"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>El gato con una vida</h3>
+                        <audio controls>
+                            <source
+                                src="audio/gatounavida.mp3"
+                                type="audio/mp3"
+                            />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/osonavidad.png"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>El oso que descubrió la Navidad</h3>
+                        <audio controls>
+                            <source
+                                src="audio/osonavidad.mp3"
+                                type="audio/mp3"
+                            />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/arbolpajaros.png"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>El árbol de los pájaros</h3>
+                        <audio controls>
+                            <source
+                                src="audio/arbolpajaros.mp3"
+                                type="audio/mp3"
+                            />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/comidarey.png"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>La comida del rey</h3>
+                        <audio controls>
+                            <source
+                                src="audio/comidarey.mp3"
+                                type="audio/mp3"
+                            />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/pasitos.png"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>Pasitos</h3>
+                        <audio controls>
+                            <source src="audio/pasitos.mp3" type="audio/mp3" />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/historiamontana.jpeg"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>Historia de una montaña</h3>
+                        <audio controls>
+                            <source
+                                src="audio/historiamontana.mp3"
+                                type="audio/mp3"
+                            />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/muneconieve.jpeg"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>Un muñeco de nieve</h3>
+                        <audio controls>
+                            <source
+                                src="audio/muneconieve.mp3"
+                                type="audio/mp3"
+                            />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/dondeelviento.jpeg"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>¿Dónde comienza el viento?</h3>
+                        <audio controls>
+                            <source
+                                src="audio/dondeelviento.mp3"
+                                type="audio/mp3"
+                            />
+                        </audio>
+                    </div>
+                </div>
+            </div>
+
+            <button class="collapsible">El legañosaurio y otros cuentos</button>
+            <div class="content">
+                <div class="row"></div>
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/faraon.jpeg"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>El faraón quiere ir al baño</h3>
+                        <audio controls>
+                            <source src="audio/faraon.mp3" type="audio/mp3" />
+                        </audio>
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/leganosaurio.jpg"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>El legañosaurio</h3>
+                        <audio controls>
+                            <source
+                                src="audio/leganosaurio.mp3"
+                                type="audio/mp3"
+                            />
+                        </audio>
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/pirataduplicado.jpeg"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>El pirata duplicado</h3>
+                        <audio controls>
+                            <source
+                                src="audio/pirataduplicado.mp3"
+                                type="audio/mp3"
+                            />
+                        </audio>
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/cuentosamedias.jpeg"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>Cuentos a medias</h3>
+                        <audio controls>
+                            <source
+                                src="audio/cuentosamedias.mp3"
+                                type="audio/mp3"
+                            />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/comepipas.jpeg"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>Comepipas</h3>
+                        <audio controls>
+                            <source
+                                src="audio/comepipas.mp3"
+                                type="audio/mp3"
+                            />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/conlamusicaaotraparte.jpeg"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>Con la música a otra parte</h3>
+                        <audio controls>
+                            <source
+                                src="audio/musicaotraparte.mp3"
+                                type="audio/mp3"
+                            />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/sopadeletras.jpeg"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>Sopa de letras</h3>
+                        <audio controls>
+                            <source
+                                src="audio/sopadeletras.mp3"
+                                type="audio/mp3"
+                            />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/historiadelrelieve.jpeg"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>Historia del relieve</h3>
+                        <audio controls>
+                            <source
+                                src="audio/historiarelieve.mp3"
+                                type="audio/mp3"
+                            />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/calamares.jpeg"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>Cuentos con calamares</h3>
+                        <audio controls>
+                            <source
+                                src="audio/calamares.mp3"
+                                type="audio/mp3"
+                            />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/trabajonino.jpeg"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>Trabajo de niño</h3>
+                        <audio controls>
+                            <source
+                                src="audio/trabajo_nino.mp3"
+                                type="audio/mp3"
+                            />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/faltadesueno.jpeg"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>Falta de sueño</h3>
+                        <audio controls>
+                            <source
+                                src="audio/faltadesueno.mp3"
+                                type="audio/mp3"
+                            />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/latransformacion.jpeg"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>La transformación</h3>
+                        <audio controls>
+                            <source
+                                src="audio/transformacion.mp3"
+                                type="audio/mp3"
+                            />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/vesesanube.jpeg"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>Ves esa nube</h3>
+                        <audio controls>
+                            <source
+                                src="audio/vesesanube.mp3"
+                                type="audio/mp3"
+                            />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/nombrescambiados.jpeg"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>Los nombres cambiados</h3>
+                        <audio controls>
+                            <source
+                                src="audio/nombrescambiados.mp3"
+                                type="audio/mp3"
+                            />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/guadalupa.jpeg"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>Guadalupa</h3>
+                        <audio controls>
+                            <source
+                                src="audio/guadalupa.mp3"
+                                type="audio/mp3"
+                            />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/unamanchadehuevofrito.jpeg"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>Una mancha de huevo frito</h3>
+                        <audio controls>
+                            <source src="audio/mancha.mp3" type="audio/mp3" />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/planetadado.jpeg"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>El planeta Dado</h3>
+                        <audio controls>
+                            <source
+                                src="audio/planetadado.mp3"
+                                type="audio/mp3"
+                            />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/mofleta.jpeg"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>La mofleta</h3>
+                        <audio controls>
+                            <source src="audio/mofleta.mp3" type="audio/mp3" />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/talla.png"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>Cuestión de talla</h3>
+                        <audio controls>
+                            <source src="audio/talla.mp3" type="audio/mp3" />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/cascabel.png"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>El cascabel al gato</h3>
+                        <audio controls>
+                            <source src="audio/cascabel.mp3" type="audio/mp3" />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/papiroflexia.png"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>Papiroflexia</h3>
+                        <audio controls>
+                            <source
+                                src="audio/papiroflexia.mp3"
+                                type="audio/mp3"
+                            />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/unabrisaligera.png"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>Una brisa ligera</h3>
+                        <audio controls>
+                            <source
+                                src="audio/unabrisaligera.mp3"
+                                type="audio/mp3"
+                            />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/bajoelcharco.png"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>Bajo el charco</h3>
+                        <audio controls>
+                            <source
+                                src="audio/bajoelcharco.mp3"
+                                type="audio/mp3"
+                            />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/ascoiris.png"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>Al final del arcoíris</h3>
+                        <audio controls>
+                            <source src="audio/ascoiris.mp3" type="audio/mp3" />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/paisazucar.png"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>El país de azúcar</h3>
+                        <audio controls>
+                            <source
+                                src="audio/paisazucar.mp3"
+                                type="audio/mp3"
+                            />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/cerdito.png"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>El señor Kópek</h3>
+                        <audio controls>
+                            <source src="audio/kopek.mp3" type="audio/mp3" />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/libertador.png"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>El libertador</h3>
+                        <audio controls>
+                            <source
+                                src="audio/libertador.mp3"
+                                type="audio/mp3"
+                            />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/mascotas.png"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>Mascotas</h3>
+                        <audio controls>
+                            <source src="audio/mascotas.mp3" type="audio/mp3" />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/migas.png"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>El rey Migas</h3>
+                        <audio controls>
+                            <source src="audio/migas.mp3" type="audio/mp3" />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/piratabarbitas.png"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>El pirata Barbitas</h3>
+                        <audio controls>
+                            <source
+                                src="audio/piratabarbitas.mp3"
+                                type="audio/mp3"
+                            />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/peortrabajo.png"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>El peor trabajo del mundo</h3>
+                        <audio controls>
+                            <source
+                                src="audio/peortrabajo.mp3"
+                                type="audio/mp3"
+                            />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/renombrarmundo.png"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>Nombrar el mundo</h3>
+                        <audio controls>
+                            <source
+                                src="audio/renombrarmundo.mp3"
+                                type="audio/mp3"
+                            />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/alacarta.png"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>A la carta</h3>
+                        <audio controls>
+                            <source src="audio/alacarta.mp3" type="audio/mp3" />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/tresocuatrodeseos.png"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>Tres o cuatro deseos</h3>
+                        <audio controls>
+                            <source
+                                src="audio/tresocuatrodeseos.mp3"
+                                type="audio/mp3"
+                            />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/iguales.png"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>Iguales</h3>
+                        <audio controls>
+                            <source src="audio/iguales.mp3" type="audio/mp3" />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/pajaroroncador.png"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>Ronquidos</h3>
+                        <audio controls>
+                            <source
+                                src="audio/pajaroroncador.mp3"
+                                type="audio/mp3"
+                            />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/prohibidocruzar.png"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>Prohibido cruzar</h3>
+                        <audio controls>
+                            <source
+                                src="audio/prohibidocruzar.mp3"
+                                type="audio/mp3"
+                            />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/cometa.jpeg"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>Todo es cometa</h3>
+                        <audio controls>
+                            <source src="audio/cometa.mp3" type="audio/mp3" />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/donpreciso.jpeg"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>Don Preciso</h3>
+                        <audio controls>
+                            <source
+                                src="audio/donpreciso.mp3"
+                                type="audio/mp3"
+                            />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/tarantula.jpeg"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>La tarántula en la peluquería</h3>
+                        <audio controls>
+                            <source
+                                src="audio/tarantula.mp3"
+                                type="audio/mp3"
+                            />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/burbujos.jpeg"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>Burbujos</h3>
+                        <audio controls>
+                            <source src="audio/burbujas.mp3" type="audio/mp3" />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/bibianaliviana.jpeg"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>Bibiana Liviana</h3>
+                        <audio controls>
+                            <source
+                                src="audio/bibianaliviana.mp3"
+                                type="audio/mp3"
+                            />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/televisor.jpeg"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>Televisor al revés</h3>
+                        <audio controls>
+                            <source
+                                src="audio/television.mp3"
+                                type="audio/mp3"
+                            />
+                        </audio>
+                    </div>
+                </div>
+            </div>
+
+            <button class="collapsible">Periquete y Santiamén</button>
+            <div class="content">
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/ovejas.png"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>Ovejas</h3>
+                        <audio controls>
+                            <source src="audio/ovejas.mp3" type="audio/mp3" />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/zoo.png"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>El zoo de peluche</h3>
+                        <audio controls>
+                            <source src="audio/zoo.mp3" type="audio/mp3" />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/comida.png"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>La comida de cumpleaños</h3>
+                        <audio controls>
+                            <source src="audio/comida.mp3" type="audio/mp3" />
+                        </audio>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="#">
+                            <img
+                                class="img-responsive"
+                                src="img/puzle.jpeg"
+                                width="200"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>La última pieza</h3>
+                        <audio controls>
+                            <source src="audio/puzle.mp3" type="audio/mp3" />
+                        </audio>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script>
+        var coll = document.getElementsByClassName('collapsible');
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener('click', function () {
+                this.classList.toggle('active');
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                }
+            });
         }
-
-        @font-face {
-            font-family: "Open Sans";
-            src: url("../fonts/opensans.woff2") format("woff2");
-        }
-
-        .topheader {
-            z-index: 100;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            font-family: "EB Garamond", serif;
-            font-size: 14pt;
-            background-color: #ffffff;
-        }
-
-        .sectiontitle {
-            padding: 50px 0;
-            /* 20px padding at the top and bottom */
-            text-align: center;
-            /* Text color */
-        }
-
-        .container {
-            font-family: "Open Sans", sans-serif;
-            font-size: 14pt;
-            padding: 70px;
-        }
-
-        a {
-            width: 100%;
-        }
-
-        h1 {
-            margin: 0;
-        }
-
-        img {
-            border-radius: 10%;
-            filter: grayscale(100%);
-        }
-
-    </style>
-</head>
-
-<body>
-    <div class="topheader">
-        <h1>Cuentos</h1>
-    </div>
-
-    <div class="container">
-        <div class="sectiontitle">
-            <h2>I. Historia de un globo y otros cuentos</h2>
-        </div>
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/gusanos.jpeg" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>Gusanos</h3>
-                <audio controls>
-                    <source src="audio/gusanos.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-        <hr />
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/globo.jpeg" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>Historia de un globo</h3>
-                <audio controls>
-                    <source src="audio/historiadeunglobo.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-
-        <hr />
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/naufrago.jpeg" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>El náufrago y el árbol</h3>
-                <audio controls>
-                    <source src="audio/naufrago.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-
-        <hr />
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/haciaatras.jpeg" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>Hacia atrás</h3>
-                <audio controls>
-                    <source src="audio/haciatras.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-
-        <hr />
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/cielobajoelmar.jpeg" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>El cielo bajo el mar</h3>
-                <audio controls>
-                    <source src="audio/cielobajoelmar.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-
-        <hr />
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/laprimeranaranja.jpeg" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>La primera naranja</h3>
-                <audio controls>
-                    <source src="audio/primeranaranja.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-
-        <hr />
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/caracola.jpeg" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>Caracola</h3>
-                <audio controls>
-                    <source src="audio/caracola.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-
-        <hr />
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/rayos.jpeg" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>Rayos</h3>
-                <audio controls>
-                    <source src="audio/rayos.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-
-        <hr />
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/capicua.jpeg" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>El último billete capicúa</h3>
-                <audio controls>
-                    <source src="audio/capicua.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-
-        <hr />
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/pan.jpeg" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>Pan</h3>
-                <audio controls>
-                    <source src="audio/pan.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-
-        <hr />
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/papelesalviento.jpeg" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>Papeles al viento</h3>
-                <audio controls>
-                    <source src="audio/papelesalviento.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-
-        <hr />
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/mediasirena.jpeg" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>Media sirena</h3>
-                <audio controls>
-                    <source src="audio/mediasirena.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-
-        <hr />
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/unomismo.jpeg" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>Uno mismo</h3>
-                <audio controls>
-                    <source src="audio/camaleon.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-
-        <hr />
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/cieloylago.jpeg" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>El cielo y el lago</h3>
-                <audio controls>
-                    <source src="audio/elcieloyellago.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-
-        <hr />
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/marcapaginas.jpeg" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>Marcapáginas</h3>
-                <audio controls>
-                    <source src="audio/marcapaginas.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-
-        <hr />
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/arbolviajero.jpeg" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>Fábula del árbol viajero</h3>
-                <audio controls>
-                    <source src="audio/arbolviajero.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-
-        <hr />
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/pendulo.jpeg" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>Péndulo</h3>
-                <audio controls>
-                    <source src="audio/pendulo.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-
-        <hr />
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/bajarelcielo.jpeg" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>Bajar el cielo</h3>
-                <audio controls>
-                    <source src="audio/bajarcielo.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-
-        <hr />
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/sineco.png" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>Sin eco</h3>
-                <audio controls>
-                    <source src="audio/sineco.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-
-        <hr />
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/cigarra.png" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>La cigarra y la hormiga</h3>
-                <audio controls>
-                    <source src="audio/cigarra.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-
-        <hr>
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/ninolloraba.png" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>El niño que lloraba galaxias</h3>
-                <audio controls>
-                    <source src="audio/ninolloraba.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-
-        <hr>
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/arbolpajaros.png" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>El árbol de los pájaros</h3>
-                <audio controls>
-                    <source src="audio/arbolpajaros.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-
-        <hr>
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/osonavidad.png" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>El oso que descubrió la Navidad</h3>
-                <audio controls>
-                    <source src="audio/osonavidad.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-
-
-        <hr />
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/lostimidos.png" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>Los tímidos</h3>
-                <audio controls>
-                    <source src="audio/lostimidos.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-
-        <hr>
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/comidarey.png" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>La comida del rey</h3>
-                <audio controls>
-                    <source src="audio/comidarey.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-
-        <hr>
-        <div class="row">
-          <div class="col-lg-6 col-md-6">
-            <a href="#">
-              <img class="img-responsive" src="img/historiamontana.jpeg" width="200" alt="" />
-            </a>
-          </div>
-          <div class="col-lg-6 col-md-6">
-            <h3>Historia de una montaña</h3>
-            <audio controls>
-              <source src="audio/historiamontana.mp3" type="audio/mp3" />
-            </audio>
-          </div>
-        </div>
-
-        <hr>
-        <div class="row">
-          <div class="col-lg-6 col-md-6">
-            <a href="#">
-              <img class="img-responsive" src="img/muneconieve.jpeg" width="200" alt="" />
-            </a>
-          </div>
-          <div class="col-lg-6 col-md-6">
-            <h3>Un muñeco de nieve</h3>
-            <audio controls>
-              <source src="audio/muneconieve.mp3" type="audio/mp3" />
-            </audio>
-          </div>
-        </div>
-
-
-        <hr>
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-            <a href="#">
-                <img class="img-responsive" src="img/pasitos.png" width="200" alt="" />
-            </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-            <h3>Pasitos</h3>
-            <audio controls>
-                <source src="audio/pasitos.mp3" type="audio/mp3" />
-            </audio>
-            </div>
-        </div>
-
-        <hr>
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-            <a href="#">
-                <img class="img-responsive" src="img/dondeelviento.jpeg" width="200" alt="" />
-            </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-            <h3>¿De dónde viene el viento?</h3>
-            <audio controls>
-                <source src="audio/dondeelviento.mp3" type="audio/mp3" />
-            </audio>
-            </div>
-        </div>
-
-        <hr />
-        <div class="sectiontitle">
-            <h2>II. El legañosaurio y otros cuentos</h2>
-        </div>
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/faraon.jpeg" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>El faraón quiere ir al baño</h3>
-                <audio controls>
-                    <source src="audio/faraon.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-        <hr />
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/leganosaurio.jpg" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>El legañosaurio</h3>
-                <audio controls>
-                    <source src="audio/leganosaurio.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-
-            <hr />
-        </div>
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/pirataduplicado.jpeg" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>El pirata duplicado</h3>
-                <audio controls>
-                    <source src="audio/pirataduplicado.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-        <hr />
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/cuentosamedias.jpeg" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>Cuentos a medias</h3>
-                <audio controls>
-                    <source src="audio/cuentosamedias.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-
-        <hr />
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/comepipas.jpeg" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>Comepipas</h3>
-                <audio controls>
-                    <source src="audio/comepipas.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-
-        <hr />
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/conlamusicaaotraparte.jpeg" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>Con la música a otra parte</h3>
-                <audio controls>
-                    <source src="audio/musicaotraparte.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-
-        <hr />
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/sopadeletras.jpeg" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>Sopa de letras</h3>
-                <audio controls>
-                    <source src="audio/sopadeletras.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-
-        <hr />
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/historiadelrelieve.jpeg" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>Historia del relieve</h3>
-                <audio controls>
-                    <source src="audio/historiarelieve.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-
-        <hr />
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/calamares.jpeg" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>Cuentos con calamares</h3>
-                <audio controls>
-                    <source src="audio/calamares.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-
-        <hr />
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/trabajonino.jpeg" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>Trabajo de niño</h3>
-                <audio controls>
-                    <source src="audio/trabajo_nino.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-
-        <hr />
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/faltadesueno.jpeg" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>Falta de sueño</h3>
-                <audio controls>
-                    <source src="audio/faltadesueno.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-
-        <hr />
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/latransformacion.jpeg" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>La transformación</h3>
-                <audio controls>
-                    <source src="audio/transformacion.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-
-        <hr />
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/vesesanube.jpeg" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>Ves esa nube</h3>
-                <audio controls>
-                    <source src="audio/vesesanube.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-
-        <hr />
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/nombrescambiados.jpeg" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>Los nombres cambiados</h3>
-                <audio controls>
-                    <source src="audio/nombrescambiados.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-
-        <hr />
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/guadalupa.jpeg" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>Guadalupa</h3>
-                <audio controls>
-                    <source src="audio/guadalupa.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-
-        <hr />
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/unamanchadehuevofrito.jpeg" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>Una mancha de huevo frito</h3>
-                <audio controls>
-                    <source src="audio/mancha.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-
-        <hr />
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/planetadado.jpeg" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>El planeta Dado</h3>
-                <audio controls>
-                    <source src="audio/planetadado.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-
-        <hr />
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/nomassopa.jpeg" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>No más sopa</h3>
-                <audio controls>
-                    <source src="audio/nomassopa.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-
-        <hr />
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/mofleta.jpeg" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>La mofleta</h3>
-                <audio controls>
-                    <source src="audio/mofleta.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-
-        <hr />
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/talla.png" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>Cuestión de talla</h3>
-                <audio controls>
-                    <source src="audio/talla.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-
-        <hr />
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/papiroflexia.png" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>Papiroflexia</h3>
-                <audio controls>
-                    <source src="audio/papiroflexia.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-
-        <hr />
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/gatounavida.png" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>El gato con una vida</h3>
-                <audio controls>
-                    <source src="audio/gatounavida.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-
-        <hr />
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/unabrisaligera.png" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>Una brisa ligera</h3>
-                <audio controls>
-                    <source src="audio/unabrisaligera.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-
-        <hr />
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/bajoelcharco.png" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>Bajo el charco</h3>
-                <audio controls>
-                    <source src="audio/bajoelcharco.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-
-        <hr />
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/ascoiris.png" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>Al final del arcoíris</h3>
-                <audio controls>
-                    <source src="audio/ascoiris.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-
-        <hr />
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/paisazucar.png" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>El país de azúcar</h3>
-                <audio controls>
-                    <source src="audio/paisazucar.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-
-        <hr />
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/cerdito.png" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>El señor Kópek</h3>
-                <audio controls>
-                    <source src="audio/kopek.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-
-        <hr />
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/libertador.png" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>El libertador</h3>
-                <audio controls>
-                    <source src="audio/libertador.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-
-        <hr />
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/mascotas.png" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>Mascotas</h3>
-                <audio controls>
-                    <source src="audio/mascotas.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-
-        <hr />
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/migas.png" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>El rey Migas</h3>
-                <audio controls>
-                    <source src="audio/migas.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-
-        <hr />
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/piratabarbitas.png" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>El pirata Barbitas</h3>
-                <audio controls>
-                    <source src="audio/piratabarbitas.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-
-        <hr />
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/peortrabajo.png" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>El peor trabajo del mundo</h3>
-                <audio controls>
-                    <source src="audio/peortrabajo.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-
-        <hr>
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/renombrarmundo.png" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>Renombrar el mundo</h3>
-                <audio controls>
-                    <source src="audio/renombrarmundo.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-
-        <hr>
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/alacarta.png" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>A la carta</h3>
-                <audio controls>
-                    <source src="audio/alacarta.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-
-        <hr>
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/tresocuatrodeseos.png" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>Tres o cuatro deseos</h3>
-                <audio controls>
-                    <source src="audio/tresocuatrodeseos.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-
-        <hr>
-        <div class="row">
-          <div class="col-lg-6 col-md-6">
-            <a href="#">
-              <img class="img-responsive" src="img/iguales.png" width="200" alt="" />
-            </a>
-          </div>
-          <div class="col-lg-6 col-md-6">
-            <h3>Iguales</h3>
-            <audio controls>
-              <source src="audio/iguales.mp3" type="audio/mp3" />
-            </audio>
-          </div>
-        </div>
-
-        <hr>
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-            <a href="#">
-                <img class="img-responsive" src="img/pajaroroncador.png" width="200" alt="" />
-            </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-            <h3>Ronquidos</h3>
-            <audio controls>
-                <source src="audio/pajaroroncador.mp3" type="audio/mp3" />
-            </audio>
-            </div>
-        </div>
-
-        <hr>
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-            <a href="#">
-                <img class="img-responsive" src="img/prohibidocruzar.png" width="200" alt="" />
-            </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-            <h3>Prohibido cruzar</h3>
-            <audio controls>
-                <source src="audio/prohibidocruzar.mp3" type="audio/mp3" />
-            </audio>
-            </div>
-        </div>
-
-        <hr>
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-            <a href="#">
-                <img class="img-responsive" src="img/cometa.jpeg" width="200" alt="" />
-            </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-            <h3>Todo es cometa</h3>
-            <audio controls>
-                <source src="audio/cometa.mp3" type="audio/mp3" />
-            </audio>
-            </div>
-        </div>
-
-        <hr>
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-            <a href="#">
-                <img class="img-responsive" src="img/donpreciso.jpeg" width="200" alt="" />
-            </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-            <h3>Don Preciso</h3>
-            <audio controls>
-                <source src="audio/donpreciso.mp3" type="audio/mp3" />
-            </audio>
-            </div>
-        </div>
-
-
-        <hr />
-        <div class="sectiontitle">
-            <h2> Periquete y Santiamén</h2>
-        </div>
-
-
-        <hr>
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/ovejas.png" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>Ovejas</h3>
-                <audio controls>
-                    <source src="audio/ovejas.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-
-        <hr>
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/zoo.png" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>El zoo de peluche</h3>
-                <audio controls>
-                    <source src="audio/zoo.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-
-        <hr>
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="img/comida.png" width="200" alt="" />
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <h3>La comida de cumpleaños</h3>
-                <audio controls>
-                    <source src="audio/comida.mp3" type="audio/mp3" />
-                </audio>
-            </div>
-        </div>
-
-        <hr>
-        <div class="row">
-          <div class="col-lg-6 col-md-6">
-            <a href="#">
-              <img class="img-responsive" src="img/puzle.jpeg" width="200" alt="" />
-            </a>
-          </div>
-          <div class="col-lg-6 col-md-6">
-            <h3>La última pieza</h3>
-            <audio controls>
-              <source src="audio/puzle.mp3" type="audio/mp3" />
-            </audio>
-          </div>
-        </div>
-
-    </div>
-</body>
-
+    </script>
 </html>
