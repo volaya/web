@@ -1,0 +1,7 @@
+# El reproductor incrustado de YouTube exige recibir la cabecera Referer.
+# La política «same-origin» la suprime en peticiones cross-origin y provoca
+# el «Error 153: Video player configuration error». Esta política es la
+# recomendada por YouTube.
+<IfModule mod_headers.c>
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>

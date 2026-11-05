@@ -1,0 +1,233 @@
+/* ==========================================================================
+   Textos (libros en HTML) — hoja de estilos común
+   Alineada con la dirección de diseño del sitio «Papel y tinta»: se reutilizan
+   los mismos tokens de color y el mismo lenguaje visual que assets/site.css.
+   La tipografía, el tipo de letra y la escala de tamaños se conservan tal como
+   estaban, para no alterar la lectura original de los libros.
+   ========================================================================== */
+
+/* --- Tipografías autoalojadas -------------------------------------------- */
+@font-face {
+    font-family: 'EB Garamond';
+    src: url('../../../../fonts/ebgaramond.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../../../../fonts/opensans.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* --- Tokens del sistema de diseño ---------------------------------------- */
+:root {
+    --paper: #faf7f2;
+    --paper-deep: #f3eee5;
+    --surface: #ffffff;
+
+    --ink: #1c1a17;
+    --ink-soft: #6e675c;
+    --muted: #a79e8f;
+
+    --line: #e7e1d7;
+    --line-strong: #d9d0c1;
+
+    --accent: #9a5b33;
+    --accent-ink: #7c4826;
+    --accent-soft: #f2e8dc;
+
+    --font-serif: 'EB Garamond', Georgia, 'Times New Roman', serif;
+    --font-sans: 'Open Sans', ui-sans-serif, system-ui, -apple-system,
+        'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+    --measure: 25em; /* ancho de la columna de lectura original (≈57 caracteres) */
+    --ease: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- Reset y base --------------------------------------------------------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* El tamaño base sigue siendo fluido (11px – 21px), igual que en los libros
+   originales, para que el tamaño de letra no cambie según el ancho de pantalla. */
+html {
+    -webkit-text-size-adjust: 100%;
+    font-size: calc(11px + (10) * ((100vw - 320px) / (1200 - 320)));
+}
+
+body {
+    margin: 0;
+    background-color: var(--paper);
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "EB Garamond", serif;
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-variant-ligatures: common-ligatures;
+    font-variant-numeric: oldstyle-nums;
+    font-size-adjust: none;
+    line-height: 130%;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+::selection {
+    background: var(--accent-soft);
+}
+
+:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 3px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* --- Columna de lectura --------------------------------------------------- */
+/* El ancho máximo es el de la versión original (25em, que escala con el
+   tamaño de letra fluido). Con box-sizing: content-box los 25em son de texto
+   útil, de modo que la mancha ocupa exactamente lo mismo que antes. */
+.main {
+    display: block;
+    box-sizing: content-box;
+    max-width: var(--measure);
+    margin: 0 auto;
+    padding: clamp(40px, 6vw, 72px) clamp(18px, 5vw, 24px) 120px;
+}
+
+/* --- Encabezados ---------------------------------------------------------- */
+h1 {
+    font-weight: normal;
+    color: var(--ink);
+    font-family: "EB Garamond", serif;
+    font-size: 1.9em;
+    margin-bottom: 0;
+    margin-top: 1em;
+}
+
+h2 {
+    font-weight: normal;
+    color: var(--ink);
+    font-family: Georgia, serif;
+    font-size: 1.9em;
+    margin-bottom: 3em;
+    margin-top: 1em;
+}
+
+/* h3 se deja sin declarar a propósito: conserva el aspecto original del
+   navegador (negrita y 1.17em) con la familia de letra heredada del cuerpo. */
+
+/* Título de capítulo: pequeño filete de acento, a juego con las cabeceras
+   de las páginas principales del sitio. */
+h2.chaptertitle::after {
+    content: '';
+    display: block;
+    width: 48px;
+    height: 2px;
+    margin-top: 0.55em;
+    background: var(--accent);
+}
+
+/* --- Texto y párrafos ----------------------------------------------------- */
+p {
+    padding: 0;
+    line-height: 130%;
+}
+
+.subtitle {
+    color: var(--ink-soft);
+    margin-bottom: 3em;
+}
+
+div.itshape {
+    font-style: italic;
+}
+
+/* --- Enlaces -------------------------------------------------------------- */
+a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.2s var(--ease);
+}
+
+a:visited {
+    color: var(--accent);
+}
+
+a:hover {
+    color: var(--accent-ink);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* --- Listas --------------------------------------------------------------- */
+ul,
+ol {
+    padding-left: 40px;
+    line-height: 130%;
+}
+
+li:hover {
+    background: var(--accent-soft);
+}
+
+/* --- Separadores y listas de definición ---------------------------------- */
+hr {
+    border: 0;
+    border-top: 2px dotted var(--line-strong);
+    margin-bottom: 1.625em;
+}
+
+dl {
+    margin: 0 0 1.625em 0;
+}
+
+dl dt {
+    font-weight: bold;
+}
+
+dl dd {
+    margin-left: 1.625em;
+}
+
+/* --- Ilustraciones -------------------------------------------------------- */
+center {
+    text-align: center;
+}
+
+figure {
+    margin: 1.6em 0;
+    text-align: center;
+}
+
+figure img {
+    margin: 0 auto;
+}
+
+/* --- Adaptación a pantallas pequeñas ------------------------------------- */
+@media (max-width: 720px) {
+    .main {
+        padding-top: 36px;
+    }
+}
+
+/* --- Accesibilidad: movimiento reducido ---------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.001ms !important;
+        transition-duration: 0.001ms !important;
+    }
+}

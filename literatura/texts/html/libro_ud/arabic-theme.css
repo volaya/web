@@ -1,0 +1,620 @@
+/* ============================================
+   TEMA ÁRABE MONOCROMÁTICO
+   ============================================ */
+
+/* Variables de color - solo blanco y negro */
+:root {
+  --color-bg: #faf7f2;
+  --color-bg-card: #ffffff;
+  --color-text: #000000;
+  --color-text-light: #333333;
+  --color-accent: #000000;
+  --color-accent-dark: #000000;
+  --color-gold: #666666;
+  --color-gold-light: #999999;
+  --color-border: #CCCCCC;
+  --color-link: #0000EE;
+  --color-link-hover: #0000AA;
+  --color-shadow: rgba(0, 0, 0, 0.08);
+  --font-body: 'Open Sans', 'Segoe UI', sans-serif;
+  --font-heading: Georgia, 'Times New Roman', serif;
+  --font-display: 'Tangerine', Georgia, serif;
+  --max-width: 800px;
+  --radius: 0px;
+}
+
+/* Reset mejorado */
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  margin: 0;
+  padding: 0;
+  background-image: url('../patterns/islamic-pattern.svg');
+  background-size: 400px 400px;
+  background-attachment: fixed;
+  background-position: top center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Contenedor principal */
+.main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Tipografía */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-text);
+  line-height: 1.3;
+  margin-top: 2.5em;
+  margin-bottom: 1em;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 2.8rem;
+  text-align: center;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  color: var(--color-accent-dark);
+  border-bottom: 3px solid var(--color-text);
+  padding-bottom: 0.8em;
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--color-text);
+  border-bottom: 2px solid var(--color-text);
+  padding-bottom: 0.4em;
+  margin-top: 2.8em;
+  padding-left: 1.8rem;
+  position: relative;
+}
+
+h2::before {
+  content: '◆';
+  position: absolute;
+  left: 0;
+  top: 0.15em;
+  font-size: 0.9em;
+  color: var(--color-text);
+}
+
+h3 {
+  font-size: 1.6rem;
+  color: var(--color-text);
+  margin-top: 2.2em;
+  padding-left: 1.2rem;
+  border-left: 3px solid var(--color-text);
+}
+
+h4 {
+  font-size: 1.35rem;
+  color: var(--color-text);
+  padding-left: 1.5rem;
+  position: relative;
+  font-style: italic;
+}
+
+h4::before {
+  content: '●';
+  position: absolute;
+  left: 0;
+  top: 0.05em;
+  font-size: 0.7em;
+  color: var(--color-text);
+}
+
+p {
+  margin-bottom: 1.4em;
+  text-align: justify;
+  hyphens: auto;
+}
+
+/* Enlaces */
+a {
+  color: var(--color-link);
+  text-decoration: none;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+a:hover {
+  color: var(--color-link-hover);
+  text-decoration: underline;
+}
+
+/* Listas */
+ul, ol {
+  padding-left: 1.8em;
+  margin-bottom: 1.4em;
+}
+
+li {
+  margin-bottom: 0.6em;
+}
+
+/* Separadores decorativos */
+hr {
+  border: none;
+  text-align: center;
+  margin: 3em 0;
+  height: auto;
+}
+
+hr::before {
+  content: '— — —';
+  color: var(--color-gold);
+  font-size: 1.2rem;
+  letter-spacing: 0.5em;
+}
+
+/* Tablas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5em auto;
+  background: var(--color-bg-card);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 2px 8px var(--color-shadow);
+  font-size: 0.95rem;
+}
+
+th, td {
+  padding: 0.75em 1em;
+  border-bottom: 1px solid var(--color-border);
+  text-align: left;
+}
+
+th {
+  background: var(--color-text);
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:hover td {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+/* Código */
+pre, code {
+  font-family: 'Consolas', 'Monaco', monospace;
+  background: #FFFFFF;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 0.2em 0.4em;
+  font-size: 0.9em;
+}
+
+pre {
+  padding: 1em;
+  overflow-x: auto;
+  line-height: 1.6;
+  border-left: 3px solid var(--color-text);
+}
+
+/* Imágenes */
+img {
+  display: block;
+  margin: 1.5em auto;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Imágenes de partituras */
+img[src*="lilypond-maqam"] {
+  max-width: 75%;
+}
+
+/* Imágenes de diapasones */
+img[src*="tikz-maqam"] {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Figuras con caption */
+figure {
+  margin: 2em 0;
+  text-align: center;
+}
+
+figure img {
+  margin: 0 auto 0.8em;
+}
+
+figcaption {
+  font-style: italic;
+  color: var(--color-text-light);
+  font-size: 0.95rem;
+}
+
+.attribution {
+  font-size: 0.8rem;
+  color: #666;
+  font-style: italic;
+  margin-top: 0.3em;
+}
+
+/* ===== MENÚ LATERAL MODERNO ===== */
+
+/* Botones laterales apilados */
+#toindex {
+  position: fixed;
+  top: 20px;
+  left: 0;
+  z-index: 110;
+  width: 64px;
+  height: 64px;
+  background: #000;
+  color: #fff;
+  border: 2px solid #000;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+}
+
+#toindex:hover {
+  background: #fff;
+  color: #000;
+  box-shadow: 4px 4px 12px rgba(0,0,0,0.3);
+}
+
+#slideout_chapter,
+#slideout_general {
+  position: fixed;
+  left: 0;
+  z-index: 110;
+  width: 64px;
+  height: 64px;
+  background: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+}
+
+#slideout_chapter {
+  top: 92px;
+}
+
+#slideout_general {
+  top: 164px;
+}
+
+#toindex a {
+  color: inherit;
+}
+
+/* Ocultar TODOS los botones cuando hay un menú abierto */
+body.menu-open #toindex,
+body.menu-open #slideout_chapter,
+body.menu-open #slideout_general {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#slideout_chapter::before,
+#slideout_general::before {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+#slideout_chapter::before {
+  content: '≡';
+}
+
+#slideout_general::before {
+  content: '☰';
+}
+
+#slideout_chapter:hover,
+#slideout_general:hover {
+  width: 80px;
+  background: #222;
+}
+
+#slideout_chapter.active,
+#slideout_general.active {
+  background: #000;
+  box-shadow: 4px 4px 16px rgba(0,0,0,0.3);
+}
+
+/* Paneles laterales */
+#slideout_inner_chapter,
+#slideout_inner_general {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: min(340px, 88vw);
+  height: 100vh;
+  height: 100dvh;
+  background: #fff;
+  color: #000;
+  z-index: 200;
+  transform: translateX(-100%);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: auto;
+  padding: 4rem 1.5rem 6rem 5rem;
+  border-right: 3px solid #000;
+  box-shadow: none;
+  pointer-events: none;
+  z-index: 200;
+}
+
+#slideout_inner_chapter.open,
+#slideout_inner_general.open {
+  transform: translateX(0);
+  pointer-events: auto;
+  z-index: 999;
+}
+
+/* Botón cerrar */
+.menu-close {
+  position: sticky;
+  top: 0;
+  float: right;
+  background: #000;
+  color: #fff;
+  border: none;
+  width: 40px;
+  height: 40px;
+  font-size: 1.25rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+/* Overlay */
+#menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+#menu-overlay.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Cuerpo bloqueado cuando menú abierto */
+body.menu-open {
+  overflow: hidden;
+}
+
+/* Listas del menú */
+#generated-toc ul,
+#slideout_inner_general ul {
+  list-style: none;
+  padding-left: 1.2rem;
+  margin: 0;
+}
+
+#generated-toc ul ul,
+#slideout_inner_general ul ul {
+  padding-left: 1.5rem;
+}
+
+#generated-toc > ul > li,
+#slideout_inner_general > ul > li {
+  border-bottom: 1px solid #e5e5e5;
+  padding: 0.6rem 0;
+}
+
+#generated-toc li li,
+#slideout_inner_general li li {
+  border-bottom: none;
+  padding: 0.35rem 0;
+}
+
+#generated-toc a,
+#slideout_inner_general a {
+  color: #000;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+#generated-toc a:hover,
+#slideout_inner_general a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Títulos dentro de paneles */
+#slideout_inner_general > p > b {
+  display: block;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.75rem;
+  color: #666;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 1rem;
+    background-attachment: scroll;
+  }
+
+  .main {
+    padding: 1.5rem 1rem 3rem;
+    margin: 1rem 0.5rem;
+    max-width: 100%;
+    border: none;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  h3 {
+    font-size: 1.35rem;
+  }
+
+  img[src*="lilypond-maqam"] {
+    max-width: 100%;
+  }
+
+  #slideout_chapter,
+  #slideout_general {
+    width: 56px;
+    height: 56px;
+    font-size: 0.6rem;
+  }
+
+  #slideout_general {
+    top: 84px;
+  }
+
+  #slideout_chapter::before,
+  #slideout_general::before {
+    font-size: 1.25rem;
+  }
+
+  #slideout_inner_chapter,
+  #slideout_inner_general {
+    width: 85vw;
+    padding: 3rem 1.25rem 5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Accesibilidad: alto contraste */
+@media (prefers-contrast: high) {
+  :root {
+    --color-text: #000000;
+    --color-gold: #000000;
+  }
+
+  body {
+    background: #FFFFFF;
+  }
+
+  a {
+    color: #0000EE;
+  }
+}
+
+/* Focus visible */
+a:focus,
+button:focus {
+  outline: 2px solid var(--color-text);
+  outline-offset: 2px;
+}
+
+/* Elementos especiales */
+blockquote {
+  margin: 1.5em 0;
+  padding: 1em 1.5em;
+  border-left: 4px solid var(--color-text);
+  background: rgba(0, 0, 0, 0.03);
+  font-style: italic;
+  color: var(--color-text-light);
+}
+
+/* Énfasis en términos árabes */
+em, i {
+  color: var(--color-accent-dark);
+  font-style: italic;
+}
+
+strong, b {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+/* Títulos de sección decorativos */
+h2[id]::before {
+  content: '◆ ';
+  color: var(--color-text);
+  font-size: 0.9em;
+}
+
+/* Animaciones sutiles */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.main > * {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-gold);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}

@@ -1,0 +1,180 @@
+/* ==========================================================================
+   Reproductor de audio (estilos de site.css, extraídos para poder usarse
+   junto a la hoja de estilo de los libros, que no los define).
+   ========================================================================== */
+
+:root {
+    --radius-sm: 8px;
+    --ease: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.track {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 11px 14px;
+    border-radius: var(--radius-sm);
+    transition: background 0.2s var(--ease);
+}
+
+.track:hover {
+    background: var(--accent-soft);
+}
+
+.track-number {
+    min-width: 26px;
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    color: var(--muted);
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+}
+
+.track-name {
+    flex: 1;
+    font-size: clamp(1.05rem, 2vw, 1.25rem);
+    color: var(--ink);
+}
+
+/* El elemento <audio> original se conserva en el DOM (es el que suena), pero
+   se oculta: la interfaz la construye site.js con estas clases. */
+.track > audio {
+    display: none;
+}
+
+.player {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 0 0 340px;
+    max-width: 340px;
+}
+
+.player-toggle {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    background: var(--surface);
+    border: 1px solid var(--line-strong);
+    border-radius: 999px;
+    color: var(--ink-soft);
+    cursor: pointer;
+    transition:
+        background 0.2s var(--ease),
+        border-color 0.2s var(--ease),
+        color 0.2s var(--ease);
+}
+
+.player-toggle svg {
+    display: block;
+    width: 13px;
+    height: 13px;
+    fill: currentColor;
+}
+
+.player-toggle:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.track.is-playing .player-toggle {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+}
+
+.player-bar {
+    position: relative;
+    flex: 1;
+    min-width: 60px;
+    height: 18px;
+    cursor: pointer;
+    touch-action: none;
+}
+
+.player-bar::before {
+    content: '';
+    position: absolute;
+    inset: 50% 0 auto 0;
+    height: 3px;
+    border-radius: 999px;
+    background: var(--line-strong);
+    transform: translateY(-50%);
+}
+
+.player-fill {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 0;
+    height: 3px;
+    border-radius: 999px;
+    background: var(--accent);
+    transform: translateY(-50%);
+}
+
+.player-fill::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 9px;
+    height: 9px;
+    border-radius: 999px;
+    background: var(--accent);
+    opacity: 0;
+    transform: translate(50%, -50%) scale(0.4);
+    transition:
+        opacity 0.2s var(--ease),
+        transform 0.2s var(--ease);
+}
+
+.track:hover .player-fill::after,
+.track.is-playing .player-fill::after,
+.player-bar:focus-visible .player-fill::after {
+    opacity: 1;
+    transform: translate(50%, -50%) scale(1);
+}
+
+/* El anillo de foco, en forma de píldora, abraza el carril en vez de encajonarlo */
+.player-bar:focus-visible {
+    outline-offset: 3px;
+    border-radius: 999px;
+}
+
+.player-time {
+    flex-shrink: 0;
+    min-width: 72px;
+    font-family: var(--font-sans);
+    font-size: 0.72rem;
+    color: var(--muted);
+    text-align: right;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+}
+
+.player-sep {
+    margin: 0 4px;
+    opacity: 0.6;
+}
+
+.track.is-playing .player-time {
+    color: var(--ink-soft);
+}
+
+/* Separador ornamental */
+.divider {
+    height: 1px;
+    margin: 26px 16px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        var(--line-strong),
+        transparent
+    );
+}
+
+/* --- Rejilla de vídeo ----------------------------------------------------- */
